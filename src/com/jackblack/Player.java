@@ -2,7 +2,7 @@ package com.jackblack;
 
 import java.util.Scanner;
 
-public class Player extends Moves{
+public class Player extends Moves {
     public String username;
     public int money;
     public int currentBet;
