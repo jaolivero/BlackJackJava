@@ -3,6 +3,8 @@ package com.jackblack;
 public class Main {
 
     public static void main(String[] args) {
-       Card card = new Card( );
+       Deck deck = new Deck();
+       deck.createDeck();
+        System.out.println(deck);
     }
 }

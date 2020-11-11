@@ -1,13 +1,12 @@
 package com.jackblack;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Deck {
     private Card card;
     final static int cardAmount = 52;
-    private final static int[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
+    private final static int[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
     private ArrayList<Card> cards;
 
     public Deck() {
@@ -47,5 +46,13 @@ public class Deck {
         this.cards.add(addCard);
     }
 
-
+    public String toString() {
+        String cardListOutput = "";
+        int cardCount= 1;
+        for (Card thisCard: this.cards) {
+            cardListOutput += " \n" + cardCount + " <--- card count" + "-" + thisCard.toString();
+            cardCount++;
+        }
+        return cardListOutput;
+    }
 }

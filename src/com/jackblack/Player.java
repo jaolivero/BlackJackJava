@@ -22,7 +22,7 @@ public class Player extends Moves {
             // deal card after
         }
     }
-|
+
     public void placeBet(int amount) {
         if (amount >= money) {
             currentBet =+ amount;

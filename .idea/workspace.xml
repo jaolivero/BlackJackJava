@@ -12,9 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7318d1c5-59fb-4585-b176-44c10c7cb764" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Card.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Moves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Moves.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,10 +113,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605037160821" />
+    <state width="1681" height="279" key="GridCell.Tab.0.bottom" timestamp="1605058791058">
+      <screen x="-1680" y="34" width="1680" height="1010" />
+    </state>
+    <state width="1681" height="279" key="GridCell.Tab.0.bottom/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
+    <state width="1681" height="279" key="GridCell.Tab.0.center" timestamp="1605058791058">
+      <screen x="-1680" y="34" width="1680" height="1010" />
+    </state>
+    <state width="1681" height="279" key="GridCell.Tab.0.center/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
+    <state width="1681" height="279" key="GridCell.Tab.0.left" timestamp="1605058791058">
+      <screen x="-1680" y="34" width="1680" height="1010" />
+    </state>
+    <state width="1681" height="279" key="GridCell.Tab.0.left/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
+    <state width="1681" height="279" key="GridCell.Tab.0.right" timestamp="1605058791058">
+      <screen x="-1680" y="34" width="1680" height="1010" />
+    </state>
+    <state width="1681" height="279" key="GridCell.Tab.0.right/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
     <state x="-1213" y="221" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604633897746">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1213" y="221" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1604633897746" />
+    <state x="-1023" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605058809957">
+      <screen x="-1680" y="34" width="1680" height="1010" />
+    </state>
+    <state x="-1023" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058809957" />
     <state x="685" y="112" key="new project wizard" timestamp="1604624884243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

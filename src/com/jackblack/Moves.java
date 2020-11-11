@@ -1,11 +1,14 @@
 package com.jackblack;
 
 public class Moves {
-    public void hit () {
+    boolean hit = false;
 
+    public void hit () {
+        if(hit) {
+        }
     }
 
     public void stand() {
-
+        // skip
     }
 }

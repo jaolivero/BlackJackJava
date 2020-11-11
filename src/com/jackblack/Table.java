@@ -22,7 +22,7 @@ public class Table {
         if(isDealCard) {
             for(Player play: allPlayers) {
 
-                player.add(myCard);
+               // player.add(myCard);
             }
         }
     }
