@@ -3,11 +3,11 @@ package com.jackblack;
 import java.util.Random;
 
 public class Card {
-    private int [] value;
-    private static String [] suite = {"Hearts", "Diamonds", "Clubs", "Spades"};
-    private Random random = new Random();
+    private int value;
+    private Suite suite;
 
-    public Card(int value, String suite) {
+    public Card(int value, Suite suite) {
+        this.suite = suite;
         this.value = value;
     }
 
@@ -15,7 +15,11 @@ public class Card {
         return this.value;
     }
 
-    public static String[] getSuite() {
+    public Suite getSuite() {
         return this.suite;
+    }
+
+    public String toString() {
+        return this.suite.toString() + "" + value;
     }
 }

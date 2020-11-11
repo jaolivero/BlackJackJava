@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Table {
     boolean isDealCard;
     Player player;
-    private List<List<Player>> allPlayers ;
+    private List<Player> allPlayers ;
     private List<Card> myHand;
     Scanner scan = new Scanner(System.in);
 
@@ -20,8 +20,8 @@ public class Table {
 
     public void deal() {
         if(isDealCard) {
-            for(Player player: allPlayers) {
-                Card myCard = Card();
+            for(Player play: allPlayers) {
+
                 player.add(myCard);
             }
         }

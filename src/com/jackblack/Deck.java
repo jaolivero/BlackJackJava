@@ -7,6 +7,7 @@ import java.util.Random;
 public class Deck {
     private Card card;
     final static int cardAmount = 52;
+    private final static int[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13}
     private ArrayList<Card> cards;
 
     public Deck() {
@@ -14,9 +15,9 @@ public class Deck {
     }
 
     public void createDeck() {
-        for (String suitType : Card.getSuite()) {
-            for (int i = 0; i < cardAmount; i++) {
-                cards.add(new Card(value, suitType))
+        for (Suite suitType : Suite.values()) {
+            for (int suitValue : cardValue) {
+                cards.add(new Card(suitValue,suitType));
             }
         }
     }

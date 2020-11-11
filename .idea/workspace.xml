@@ -12,6 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7318d1c5-59fb-4585-b176-44c10c7cb764" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Table.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -103,6 +108,10 @@
     </state>
     <state x="-1011" y="263" key="#com.intellij.ide.util.MemberChooser/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1604725059507" />
     <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604729466286" />
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605037160821">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605037160821" />
     <state x="-1213" y="221" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604633897746">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
