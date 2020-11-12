@@ -3,8 +3,11 @@ package com.jackblack;
 public class Main {
 
     public static void main(String[] args) {
-       Deck deck = new Deck();
-       deck.createDeck();
-        System.out.println(deck);
+        Player joel = new Player("JAO", 50000);
+        System.out.println(joel);
+//       Deck deck = new Deck();
+//        deck.shuffle();
+
+
     }
 }

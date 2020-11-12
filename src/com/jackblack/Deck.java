@@ -6,7 +6,7 @@ import java.util.Random;
 public class Deck {
     private Card card;
     final static int cardAmount = 52;
-    private final static int[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+    private final static byte[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
     private ArrayList<Card> cards;
 
     public Deck() {
@@ -15,7 +15,7 @@ public class Deck {
 
     public void createDeck() {
         for (Suite suitType : Suite.values()) {
-            for (int suitValue : cardValue) {
+            for (byte suitValue : cardValue) {
                 cards.add(new Card(suitValue,suitType));
             }
         }
@@ -46,11 +46,16 @@ public class Deck {
         this.cards.add(addCard);
     }
 
+    public void draw(Deck currentDeck) {
+        this.cards.add(currentDeck.getCard(0));
+        currentDeck.removeCard(0);
+    }
+
     public String toString() {
         String cardListOutput = "";
         int cardCount= 1;
         for (Card thisCard: this.cards) {
-            cardListOutput += " \n" + cardCount + " <--- card count" + "-" + thisCard.toString();
+            cardListOutput += " \n" + "-" + thisCard.toString();
             cardCount++;
         }
         return cardListOutput;

@@ -1,17 +1,15 @@
 package com.jackblack;
 
-import java.util.Random;
-
 public class Card {
-    private int value;
+    private byte value;
     private Suite suite;
 
-    public Card(int value, Suite suite) {
+    public Card(byte value, Suite suite) {
         this.suite = suite;
         this.value = value;
     }
 
-    public int getValue() {
+    public byte getValue() {
         return this.value;
     }
 
@@ -20,6 +18,6 @@ public class Card {
     }
 
     public String toString() {
-        return this.suite.toString() + "" + value;
+        return this.suite.toString() + " " + value;
     }
 }

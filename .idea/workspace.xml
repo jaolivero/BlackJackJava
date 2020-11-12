@@ -12,6 +12,15 @@
   <component name="ChangeListManager">
     <list default="true" id="7318d1c5-59fb-4585-b176-44c10c7cb764" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Dealer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Dealer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Moves.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Moves.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Table.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/BlackJack/com/jackblack/Table.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/jackblack/Dealer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Dealer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/jackblack/Moves.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/jackblack/Moves.java" afterDir="false" />
@@ -26,8 +35,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -98,45 +107,51 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="712" y="344" key="#Notifications" timestamp="1604804970474">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="712" y="344" key="#Notifications/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604804970474" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1604729466286">
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser" timestamp="1605156293628">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1011" y="263" key="#com.intellij.ide.util.MemberChooser/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1604725059507" />
-    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1604729466286" />
+    <state x="765" y="236" key="#com.intellij.ide.util.MemberChooser/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605156293628" />
     <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1605037160821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="275" key="FileChooserDialogImpl/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605037160821" />
-    <state width="1681" height="279" key="GridCell.Tab.0.bottom" timestamp="1605058791058">
-      <screen x="-1680" y="34" width="1680" height="1010" />
+    <state width="1921" height="301" key="GridCell.Tab.0.bottom" timestamp="1605071511207">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1681" height="279" key="GridCell.Tab.0.bottom/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
-    <state width="1681" height="279" key="GridCell.Tab.0.center" timestamp="1605058791058">
-      <screen x="-1680" y="34" width="1680" height="1010" />
+    <state width="1681" height="301" key="GridCell.Tab.0.bottom/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605060507028" />
+    <state width="1921" height="301" key="GridCell.Tab.0.bottom/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605071511207" />
+    <state width="1921" height="301" key="GridCell.Tab.0.center" timestamp="1605071511206">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1681" height="279" key="GridCell.Tab.0.center/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
-    <state width="1681" height="279" key="GridCell.Tab.0.left" timestamp="1605058791058">
-      <screen x="-1680" y="34" width="1680" height="1010" />
+    <state width="1681" height="301" key="GridCell.Tab.0.center/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605060507028" />
+    <state width="1921" height="301" key="GridCell.Tab.0.center/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605071511206" />
+    <state width="1921" height="301" key="GridCell.Tab.0.left" timestamp="1605071511205">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1681" height="279" key="GridCell.Tab.0.left/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
-    <state width="1681" height="279" key="GridCell.Tab.0.right" timestamp="1605058791058">
-      <screen x="-1680" y="34" width="1680" height="1010" />
+    <state width="1681" height="301" key="GridCell.Tab.0.left/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605060507028" />
+    <state width="1921" height="301" key="GridCell.Tab.0.left/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605071511205" />
+    <state width="1921" height="301" key="GridCell.Tab.0.right" timestamp="1605071511207">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1681" height="279" key="GridCell.Tab.0.right/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058791058" />
+    <state width="1681" height="301" key="GridCell.Tab.0.right/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605060507028" />
+    <state width="1921" height="301" key="GridCell.Tab.0.right/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605071511207" />
     <state x="-1213" y="221" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1604633897746">
       <screen x="-1680" y="34" width="1680" height="1010" />
     </state>
     <state x="-1213" y="221" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1604633897746" />
-    <state x="-1023" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605058809957">
-      <screen x="-1680" y="34" width="1680" height="1010" />
+    <state x="751" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605071806390">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-1023" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1680.34.1680.1010/0.0.1920.1040@-1680.34.1680.1010" timestamp="1605058809957" />
+    <state x="751" y="431" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1680.34.1680.1010/0.0.1920.1040@0.0.1920.1040" timestamp="1605071806390" />
     <state x="685" y="112" key="new project wizard" timestamp="1604624884243">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

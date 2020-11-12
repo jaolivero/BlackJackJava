@@ -3,16 +3,15 @@ package com.jackblack;
 import java.util.Scanner;
 
 public class Player extends Moves {
-    public String username;
+    private String username;
     public int money;
     public int currentBet;
     boolean doubleBet = false;
     Scanner input = new Scanner(System.in);
 
 
-    public Player(String username, int money, int currentBet) {
+    public Player(String username, int money) {
         this.money = money;
-        this.currentBet = currentBet;
         this.username = username;
     }
 
@@ -37,4 +36,15 @@ public class Player extends Moves {
         return money;
     }
 
+    @Override
+    public String toString() {
+        return
+                "username = " + username +
+                " money = " + money +
+                " currentBet = " + currentBet;
+    }
+
+//   public String toString()  {
+//    return currentBet + " "  + " " + username + " " + money;
+//   }
 }
