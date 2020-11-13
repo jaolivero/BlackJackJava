@@ -34,8 +34,8 @@ public class Deck {
         this.cards = shuffledDeck;
     }
 
-    public void removeCard(int i) {
-        cards.remove(i);
+    public Card removeCard(int i) {
+        return cards.remove(i);
     }
 
     public Card getCard(int i) {

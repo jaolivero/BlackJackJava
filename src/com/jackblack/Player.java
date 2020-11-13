@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Player extends Moves {
     private String username;
-    public int money;
-    public int currentBet;
+    private int money;
+
+
+    private int currentBet;
     boolean doubleBet = false;
     Scanner input = new Scanner(System.in);
 
@@ -34,6 +36,10 @@ public class Player extends Moves {
 
     public int getMoney() {
         return money;
+    }
+
+    public int getCurrentBet() {
+        return currentBet;
     }
 
     @Override

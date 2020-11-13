@@ -11,12 +11,14 @@ public class Hand {
     public Hand(Player myPlayer) {
         this.myPlayer = myPlayer;
     }
+
     public void deal (Deck deck, Player myPlayer) {
-        myHand.add(card);
+        Card removed = deck.removeCard(0);
+        myHand.addCard(removed);
     }
 
     public byte getScore() {
-        for(Card myCard: myHand){
+        for(Card myCard: myHand) {
             score = (byte) + card.getValue();
         }
         return score;
