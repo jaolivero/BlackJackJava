@@ -46,9 +46,10 @@ public class Deck {
         this.cards.add(addCard);
     }
 
-    public void draw(Deck currentDeck) {
-        this.cards.add(currentDeck.getCard(0));
-        currentDeck.removeCard(0);
+    public Card draw() {
+        this.cards.add(this.getCard(0));
+        return this.removeCard(0);
+
     }
 
     public String toString() {

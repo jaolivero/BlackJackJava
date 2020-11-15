@@ -5,16 +5,17 @@ import java.util.ArrayList;
 public class Hand {
     private byte score;
     private ArrayList<Card> myHand;
+
     private Player myPlayer;
     private Card card;
+    private Deck thisDeck;
 
     public Hand(Player myPlayer) {
         this.myPlayer = myPlayer;
     }
 
-    public void deal (Deck deck, Player myPlayer) {
-        Card removed = deck.removeCard(0);
-        myHand.addCard(removed);
+    public void addCard (Card dealt) {
+        this.myHand.add(dealt);
     }
 
     public byte getScore() {
@@ -22,5 +23,9 @@ public class Hand {
             score = (byte) + card.getValue();
         }
         return score;
+    }
+
+    public Player getMyPlayer() {
+        return myPlayer;
     }
 }

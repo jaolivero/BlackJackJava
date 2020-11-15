@@ -3,10 +3,9 @@ package com.jackblack;
 import java.util.Scanner;
 
 public class Player extends Moves {
+    private int rounds;
     private String username;
     private int money;
-
-
     private int currentBet;
     boolean doubleBet = false;
     Scanner input = new Scanner(System.in);
@@ -18,19 +17,19 @@ public class Player extends Moves {
     }
 
     public void doubleBet () {
-        if(doubleBet) {
+        if(doubleBet && rounds == 1) {
             currentBet *= 2;
             // deal card after
         }
     }
 
     public void placeBet(int amount) {
-        if (amount >= money) {
-            currentBet =+ amount;
-            money -= amount;
+        if (this.getMoney() < amount) {
+            System.out.println("Please enter an valid amount.");
         }
         else {
-            System.out.println("Please enter an valid amount.");
+            currentBet =+ amount;
+            money -= amount;
         }
     }
 
