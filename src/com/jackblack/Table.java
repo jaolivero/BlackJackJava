@@ -13,7 +13,7 @@ public class Table {
     Dealer dealer;
     static Hand hand;
     public List<Player> allPlayers = new ArrayList<Player>();
-    List<Card> myHand;
+    List<Hand> allHands;
 
     public Table(byte seats) {
         this.seats = seats;
@@ -22,6 +22,7 @@ public class Table {
     public void game() {
         Deck deck = new Deck();
         deck.shuffle();
+        System.out.println(deck);
         Dealer dealerOne = new Dealer();
         addPlayer();
         for (Player playerOne : allPlayers) {
@@ -30,9 +31,16 @@ public class Table {
                 System.out.print("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
+                System.out.println(allPlayers);
                 Hand playerHand = new Hand(playerOne);
-
-                playerOne.doubleBet();
+                allHands.add(playerHand);
+                for(int i = 0; i < 2; i++) {
+                    Card removed = deck.removeCard(0);
+                    System.out.println(removed);
+                    playerHand.addCard(removed);
+                    System.out.println(playerHand.getScore());
+                }
+                /*playerOne.doubleBet();
                 checkScore();
                 System.out.println(myHand);
                 System.out.println("Enter hit or stand?");
@@ -41,7 +49,7 @@ public class Table {
                     break;
                 } else {
                     deal();
-                }
+                }*/
 //            dealer.checkScore();
 //            player.checkScore();
             }
@@ -78,6 +86,5 @@ public class Table {
         System.out.println("Please enter the total amount of money you would like to use ");
         int balance = scan.nextInt();
         allPlayers.add(new Player(user, balance));
-        System.out.println(allPlayers);
     }
 }

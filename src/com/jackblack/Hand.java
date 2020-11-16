@@ -5,7 +5,6 @@ import java.util.ArrayList;
 public class Hand {
     private byte score;
     private ArrayList<Card> myHand;
-
     private Player myPlayer;
     private Card card;
     private Deck thisDeck;
