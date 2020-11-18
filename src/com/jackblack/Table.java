@@ -10,40 +10,41 @@ public class Table {
     boolean isDealCard;
     public byte seats;
     static Player player;
+    Deck tableDeck;
     Dealer dealer;
     static Hand hand;
     public List<Player> allPlayers = new ArrayList<Player>();
-    List<Hand> allHands;
+    public List<Hand> allHands = new ArrayList<>();
 
     public Table(byte seats) {
         this.seats = seats;
     }
 
     public void game() {
-        Deck deck = new Deck();
-        deck.shuffle();
-        System.out.println(deck);
+        Deck tableDeck = new Deck();
+        tableDeck.shuffle();
+        System.out.print(tableDeck);
         Dealer dealerOne = new Dealer();
         addPlayer();
         for (Player playerOne : allPlayers) {
             while (playerOne.getMoney() > 0) {
                 //displayPlayerInfo();
-                System.out.print("How much would you like to bet? ");
+                System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
                 System.out.println(allPlayers);
                 Hand playerHand = new Hand(playerOne);
                 allHands.add(playerHand);
+                System.out.println(allHands);
                 for(int i = 0; i < 2; i++) {
-                    Card removed = deck.removeCard(0);
+                    Card gettingCard = tableDeck.getCard(0);
+                    Card removed = tableDeck.removeCard(0);
                     System.out.println(removed);
-                    playerHand.addCard(removed);
+                    playerHand.addCard(gettingCard);
                     System.out.println(playerHand.getScore());
                 }
                 /*playerOne.doubleBet();
                 checkScore();
-                System.out.println(myHand);
-                System.out.println("Enter hit or stand?");
                 String choice = scan.next();
                 if (choice.equals("Stand")) {
                     break;

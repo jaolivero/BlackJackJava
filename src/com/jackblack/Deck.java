@@ -25,11 +25,11 @@ public class Deck {
         ArrayList<Card> shuffledDeck = new ArrayList<Card>();
         Random random = new Random();
         int randomIndex = 0;
-        int originalSize = this.cards.size();
+        int originalSize = cards.size();
         for (int i = 0; i < originalSize; i++) {
-            randomIndex = random.nextInt((this.cards.size()));
-            shuffledDeck.add(this.cards.get(randomIndex));
-            this.cards.remove(randomIndex);
+            randomIndex = random.nextInt((cards.size()));
+            shuffledDeck.add(cards.get(randomIndex));
+            cards.remove(randomIndex);
         }
         this.cards = shuffledDeck;
     }
@@ -49,7 +49,6 @@ public class Deck {
     public Card draw() {
         this.cards.add(this.getCard(0));
         return this.removeCard(0);
-
     }
 
     public String toString() {
@@ -57,7 +56,7 @@ public class Deck {
         int cardCount= 1;
         for (Card thisCard: this.cards) {
             cardListOutput += " \n" + "-" + thisCard.toString();
-            cardCount++;
+
         }
         return cardListOutput;
     }
