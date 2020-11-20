@@ -23,7 +23,6 @@ public class Table {
     public void game() {
         Deck tableDeck = new Deck();
         tableDeck.shuffle();
-        System.out.print(tableDeck);
         Dealer dealerOne = new Dealer();
         addPlayer();
         for (Player playerOne : allPlayers) {
@@ -39,9 +38,9 @@ public class Table {
                 for(int i = 0; i < 2; i++) {
                     Card gettingCard = tableDeck.getCard(0);
                     Card removed = tableDeck.removeCard(0);
-                    System.out.println(removed);
+                    System.out.println(gettingCard);
                     playerHand.addCard(gettingCard);
-                    System.out.println(playerHand.getScore());
+//             System.out.println(playerHand.getScore());
                 }
                 /*playerOne.doubleBet();
                 checkScore();

@@ -2,10 +2,10 @@ package com.jackblack;
 
 public class Card {
     private byte value;
-    private Suite suite;
+    private String suit;
 
-    public Card(byte value, Suite suite) {
-        this.suite = suite;
+    public Card(byte value, String suit) {
+        this.suit = suit;
         this.value = value;
     }
 
@@ -13,11 +13,11 @@ public class Card {
         return this.value;
     }
 
-    public Suite getSuite() {
-        return this.suite;
+    public String getSuite() {
+        return this.suit;
     }
 
     public String toString() {
-        return this.suite.toString() + " " + value;
+        return this.suit.toString() + " " + value;
     }
 }

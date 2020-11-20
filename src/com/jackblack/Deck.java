@@ -6,17 +6,19 @@ import java.util.Random;
 public class Deck {
     private Card card;
     final static int cardAmount = 52;
+    private final String[] suit = {"Hearts", "Club", "Diamond", "Spades"};
     private final static byte[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
     private ArrayList<Card> cards;
 
     public Deck() {
         this.cards = new ArrayList<Card>();
+        this.createDeck();
     }
 
     public void createDeck() {
-        for (Suite suitType : Suite.values()) {
+        for (String s : suit) {
             for (byte suitValue : cardValue) {
-                cards.add(new Card(suitValue,suitType));
+                cards.add(new Card(suitValue, s));
             }
         }
     }
