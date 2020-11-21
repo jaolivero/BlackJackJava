@@ -8,7 +8,6 @@ public class Hand {
     private Player myPlayer;
 
     private Card card;
-    private Deck thisDeck;
 
     public Hand(Player myPlayer) {
         this.myPlayer = myPlayer;
@@ -22,7 +21,7 @@ public class Hand {
 
     public byte getScore() {
         for(Card myCard: myHand) {
-            score = (byte) + card.getValue();
+            score += myCard.getValue();
         }
         return score;
     }

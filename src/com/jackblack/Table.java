@@ -26,30 +26,32 @@ public class Table {
         Dealer dealerOne = new Dealer();
         addPlayer();
         for (Player playerOne : allPlayers) {
+            Hand playerHand = new Hand(playerOne);
+            allHands.add(playerHand);
             while (playerOne.getMoney() > 0) {
                 //displayPlayerInfo();
                 System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
-                System.out.println(allPlayers);
-                Hand playerHand = new Hand(playerOne);
-                allHands.add(playerHand);
-                System.out.println(allHands);
+                System.out.println(allPlayers.get(0));
+                //System.out.println(allHands);
                 for(int i = 0; i < 2; i++) {
                     Card gettingCard = tableDeck.getCard(0);
                     Card removed = tableDeck.removeCard(0);
                     System.out.println(gettingCard);
                     playerHand.addCard(gettingCard);
-//             System.out.println(playerHand.getScore());
                 }
-                /*playerOne.doubleBet();
+                System.out.println("Score");
+                System.out.println("----");
+                System.out.println(playerHand.getScore());
                 checkScore();
-                String choice = scan.next();
-                if (choice.equals("Stand")) {
-                    break;
-                } else {
-                    deal();
-                }*/
+                System.out.println("----");
+//                String choice = scan.next();
+//                if (choice.equals("Stand")) {
+//                    break;
+//                } else {
+//                    deal();
+//                }*/
 //            dealer.checkScore();
 //            player.checkScore();
             }
