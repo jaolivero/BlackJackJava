@@ -36,7 +36,7 @@ public class Hand {
         return myPlayer;
     }
 
-    public void setScore(byte score) {
-        this.score = score;
+    public void setScore(byte reset) {
+       score = reset;
     }
 }

@@ -29,18 +29,15 @@ public class Table {
             Hand playerHand = new Hand(playerOne);
             allHands.add(playerHand);
             while (playerOne.getMoney() > 0) {
-                //displayPlayerInfo();
+                playerHand.setScore((byte) 0);
                 System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
                 System.out.println(allPlayers.get(0));
                 deal(2,tableDeck, playerHand);
                 playerHand.calculateScore();
-                System.out.println("Score");
-                System.out.println("----");
-                System.out.println(" " + playerHand.getScore()+ " ");
-                System.out.println("----");
-                checkScore(playerHand, tableDeck);
+                printScore(playerHand);
+                checkScore(playerHand, tableDeck, playerOne);
                 // create hand for deal
                 //break down method so that we would have less parameters
 //            dealer.checkScore();
@@ -58,10 +55,9 @@ public class Table {
         }
     }
 
-    public static void checkScore(Hand currentHand, Deck currentDeck) {
+    public void checkScore(Hand currentHand, Deck currentDeck, Player myPlayer) {
         if (currentHand.getScore() > 21) {
             System.out.println("Bust!!!");
-            currentHand.setScore((byte) 0);
         } else if (currentHand.getScore() == 21) {
             currentHand.setScore((byte) 0);
             System.out.println("21 congratulations, you won");
@@ -72,13 +68,16 @@ public class Table {
             switch (choice) {
                 case 1:
                     deal(1, currentDeck, currentHand);
-                case 2:
+                    currentHand.setScore((byte) 0);
                     currentHand.calculateScore();
+                    printScore(currentHand);
+                case 2:
+                    break;
                 case 3:
-                    player.doubleBet();
-                    System.out.println(player.getCurrentBet());
+                    myPlayer.doubleBet();
             }
         }
+        currentHand.setScore((byte) 0);
     }
 
     public void addPlayer() {
@@ -87,5 +86,12 @@ public class Table {
         System.out.println("Please enter the total amount of money you would like to use ");
         int balance = scan.nextInt();
         allPlayers.add(new Player(user, balance));
+    }
+
+    public void printScore(Hand myHand) {
+        System.out.println("SCORE");
+        System.out.println("----");
+        System.out.println(" " + myHand.getScore() + " ");
+        System.out.println("----");
     }
 }
