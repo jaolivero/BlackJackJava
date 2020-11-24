@@ -41,7 +41,6 @@ public class Table {
                 // create hand for deal
                 //break down method so that we would have less parameters
 //            dealer.checkScore();
-//            player.checkScore();
             }
         }
     }
