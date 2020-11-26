@@ -36,6 +36,7 @@ public class Table {
                 System.out.println(allPlayers.get(0));
                 deal(2,tableDeck, playerHand);
                 playerHand.calculateScore();
+                System.out.println(playerHand);
                 printScore(playerHand);
                 checkScore(playerHand, tableDeck, playerOne);
                 // create hand for deal

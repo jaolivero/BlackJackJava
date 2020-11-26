@@ -39,4 +39,9 @@ public class Hand {
     public void setScore(byte reset) {
        score = reset;
     }
+
+    @Override
+    public String toString() {
+        return " ";
+    }
 }
