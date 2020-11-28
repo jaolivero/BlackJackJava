@@ -33,6 +33,10 @@ public class Player extends Moves {
         }
     }
 
+    public int wonBet() {
+        return money + currentBet;
+    }
+
     public int getMoney() {
         return money;
     }

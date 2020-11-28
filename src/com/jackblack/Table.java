@@ -12,6 +12,7 @@ public class Table {
     static Player player;
     Deck tableDeck;
     Dealer dealer;
+    Hand dealerHand;
     static Hand hand;
     public List<Player> allPlayers = new ArrayList<Player>();
     public List<Hand> allHands = new ArrayList<>();
@@ -24,6 +25,8 @@ public class Table {
         Deck tableDeck = new Deck();
         tableDeck.shuffle();
         Dealer dealerOne = new Dealer();
+        Hand dealersHand = new Hand(dealerOne);
+        allHands.add(dealersHand);
         addPlayer();
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
@@ -72,7 +75,7 @@ public class Table {
                     currentHand.calculateScore();
                     printScore(currentHand);
                 case 2:
-                    break;
+                    compareScoreToDealer(currentHand, dealerHand);
                 case 3:
                     myPlayer.doubleBet();
             }
@@ -93,5 +96,14 @@ public class Table {
         System.out.println("----");
         System.out.println(" " + myHand.getScore() + " ");
         System.out.println("----");
+    }
+
+    public void compareScoreToDealer(Hand myHand, Hand myDealer) {
+        if (myHand.getScore() == myDealer.getScore()) {
+            System.out.println("Push");
+        }
+        else if (myDealer.getScore() > 21) {
+            myHand.getMyPlayer().wonBet();
+        }
     }
 }
