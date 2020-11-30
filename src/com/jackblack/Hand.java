@@ -1,6 +1,7 @@
 package com.jackblack;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Hand {
 
@@ -20,8 +21,9 @@ public class Hand {
     }
 
 
-    public void addCard (Card dealt) {
-        this.myHand.add(dealt);
+    public Card addCard (Card dealt) {
+        Card myCard = dealt;
+       return myCard;
     }
 
     public byte getScore() {
@@ -44,8 +46,9 @@ public class Hand {
        score = reset;
     }
 
-    @Override
-    public String toString() {
-        return " ";
-    }
+//    @Override
+//    public String toString() {
+//        int i++;
+//        return myHand.get(i);
+//    }
 }
