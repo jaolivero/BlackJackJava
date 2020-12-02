@@ -7,7 +7,6 @@ import java.util.Scanner;
 public class Table {
     private static Scanner scan = new Scanner(System.in);
     private byte rounds = 1;
-    boolean isDealCard;
     public byte seats;
     static Player player;
     Deck tableDeck;
@@ -28,7 +27,7 @@ public class Table {
         Hand dealersHand = new Hand(dealerOne);
         allHands.add(dealersHand);
         deal(2, tableDeck, dealersHand);
-        System.out.println(allHands);
+        System.out.println("Dealer's hand");
         addPlayer();
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
@@ -38,7 +37,6 @@ public class Table {
                 System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
-                System.out.println(allPlayers.get(0));
                 deal(2,tableDeck, playerHand);
                 playerHand.calculateScore();
                 System.out.println(playerHand);

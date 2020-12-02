@@ -23,6 +23,7 @@ public class Hand {
 
     public Card addCard (Card dealt) {
         Card myCard = dealt;
+        //myHand.add(dealt);
        return myCard;
     }
 
