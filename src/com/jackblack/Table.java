@@ -62,7 +62,7 @@ public class Table {
         if (currentHand.getScore() > 21) {
             System.out.println("Bust!!!");
         } else if (currentHand.getScore() == 21) {
-            currentHand.setScore((byte) 0);
+           // currentHand.setScore((byte) 0);
             System.out.println("21 congratulations, you won");
 
         } else {
@@ -74,6 +74,7 @@ public class Table {
                     currentHand.setScore((byte) 0);
                     currentHand.calculateScore();
                     printScore(currentHand);
+                    return;
                 case 2:
                     compareScoreToDealer(currentHand, dealerHand);
                 case 3:

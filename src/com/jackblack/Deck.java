@@ -24,7 +24,7 @@ public class Deck {
     }
 
     public void shuffle() {
-        ArrayList<Card> shuffledDeck = new ArrayList<Card>();
+        ArrayList<Card> shuffledDeck = new ArrayList<>();
         Random random = new Random();
         int randomIndex = 0;
         int originalSize = cards.size();

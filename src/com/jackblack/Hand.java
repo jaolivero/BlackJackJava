@@ -21,10 +21,9 @@ public class Hand {
     }
 
 
-    public Card addCard (Card dealt) {
+    public void addCard (Card dealt) {
         Card myCard = dealt;
-        //myHand.add(dealt);
-       return myCard;
+        myHand.add(dealt);
     }
 
     public byte getScore() {
@@ -34,7 +33,6 @@ public class Hand {
     public byte calculateScore() {
         for(Card myCard: myHand) {
             score += myCard.getValue();
-            //TOTAL SCORE???
         }
         return score;
     }
