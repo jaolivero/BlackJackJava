@@ -6,7 +6,7 @@ import java.util.Arrays;
 public class Hand {
 
     private byte score;
-    private ArrayList<Card> myHand;
+    private ArrayList<Card> myHand = new ArrayList<>();
     private Player myPlayer;
     private Dealer dealer;
     private Card card;
@@ -22,7 +22,6 @@ public class Hand {
 
 
     public void addCard (Card dealt) {
-        Card myCard = dealt;
         myHand.add(dealt);
     }
 

@@ -27,6 +27,7 @@ public class Table {
         Hand dealersHand = new Hand(dealerOne);
         allHands.add(dealersHand);
         deal(2, tableDeck, dealersHand);
+        System.out.println(dealersHand);
         System.out.println("Dealer's hand");
         addPlayer();
         for (Player playerOne : allPlayers) {
