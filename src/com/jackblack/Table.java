@@ -32,9 +32,9 @@ public class Table {
         addPlayer();
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
+            allHands.add(playerHand);
             while (playerOne.getMoney() > 0) {
-                allHands.add(playerHand);
-                playerHand.setScore((byte) 0);
+                System.out.println();
                 System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);

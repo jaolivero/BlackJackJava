@@ -9,6 +9,7 @@ public class Hand {
     private ArrayList<Card> myHand = new ArrayList<>();
     private Player myPlayer;
     private Dealer dealer;
+    private boolean hasAce;
     private Card card;
 
     public Hand(Player myPlayer) {
@@ -30,8 +31,14 @@ public class Hand {
     }
 
     public byte calculateScore() {
-        for(Card myCard: myHand) {
-            score += myCard.getValue();
+        score = 0;
+        hasAce = false;
+        for(var card: myHand) {
+            score += card.getValue();
+        }
+        if (score > 21 && hasAce) {
+            score -= 10;
+            hasAce = false;
         }
         return score;
     }

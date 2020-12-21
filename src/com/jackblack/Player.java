@@ -3,7 +3,6 @@ package com.jackblack;
 import java.util.Scanner;
 
 public class Player extends Moves {
-    private int rounds;
     private String username;
     private int money;
     private int currentBet;
@@ -17,7 +16,7 @@ public class Player extends Moves {
     }
 
     public void doubleBet () {
-        if(doubleBet && rounds == 1) {
+        if(doubleBet) {
             currentBet *= 2;
             // deal card after
         }
