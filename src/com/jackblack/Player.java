@@ -32,8 +32,13 @@ public class Player extends Moves {
         }
     }
 
-    public int wonBet() {
-        return money + currentBet;
+    public int betResults(char result) {
+        if(result == 'W') {
+            return money + currentBet;
+        }
+        else {
+            return money - currentBet;
+        }
     }
 
     public int getMoney() {
@@ -42,6 +47,10 @@ public class Player extends Moves {
 
     public int getCurrentBet() {
         return currentBet;
+    }
+
+    public String getUsername() {
+        return username;
     }
 
     @Override

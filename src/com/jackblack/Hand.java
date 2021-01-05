@@ -1,12 +1,11 @@
 package com.jackblack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Hand {
 
     private byte score;
-    private ArrayList<Card> myHand = new ArrayList<>();
+    private ArrayList<Card> myHand;
     private Player myPlayer;
     private Dealer dealer;
     private boolean hasAce;
@@ -14,13 +13,13 @@ public class Hand {
 
     public Hand(Player myPlayer) {
         this.myPlayer = myPlayer;
-        this.myHand = new ArrayList<Card>();
+        this.myHand = new ArrayList<>();
     }
 
     public Hand(Dealer tableDealer) {
         this.dealer = tableDealer;
+        this.myHand = new ArrayList<>();
     }
-
 
     public void addCard (Card dealt) {
         myHand.add(dealt);
@@ -43,6 +42,12 @@ public class Hand {
         return score;
     }
 
+    public void removeAllCards() {
+        for(int i = 0; i < myHand.size() - 1; i++) {
+            myHand.remove(i);
+        }
+    }
+
     public Player getMyPlayer() {
         return myPlayer;
     }
@@ -51,9 +56,14 @@ public class Hand {
        score = reset;
     }
 
-//    @Override
-//    public String toString() {
-//        int i++;
-//        return myHand.get(i);
-//    }
+
+    @Override
+    public String toString() {
+        String output = "";
+        for (Card aCard : myHand) {
+            output += aCard + " ";
+        }
+        System.out.println(getMyPlayer());
+        return output;
+    }
 }

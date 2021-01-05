@@ -1,11 +1,16 @@
 package com.jackblack;
 
 public class Dealer extends Moves {
+    static String name = "Dealer";
+    static byte hit = 1;
+    static byte option = 17;
+    static byte stand = 2;
 
-    public byte score;
+    public static String getName() {
+        return name;
+    }
 
-    //logic for decision making
-    public void logic() {
-
+    public byte logic(byte score) {
+        return score < option ? hit : stand;
     }
 }
