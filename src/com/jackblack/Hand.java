@@ -43,7 +43,7 @@ public class Hand {
     }
 
     public void removeAllCards() {
-        for(int i = 0; i < myHand.size() - 1; i++) {
+        for(int i = 0; i < myHand.size() + 1; i++) {
             myHand.remove(i);
         }
     }

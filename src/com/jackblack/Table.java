@@ -32,7 +32,6 @@ public class Table {
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
             allHands.add(playerHand);
-            while (playerOne.getMoney() > 0) {
                 System.out.println("How much would you like to bet? ");
                 int betAmount = scan.nextInt();
                 playerOne.placeBet(betAmount);
@@ -40,12 +39,15 @@ public class Table {
                 playerHand.calculateScore();
                 System.out.println(playerHand);
                 printScore(playerHand);
-                checkScore(playerHand, tableDeck, playerOne);
-                playerHand.removeAllCards();
+                while(playerOne.getMoney() > 0) {
+                    checkScore(playerHand, tableDeck, playerOne);
+                    playerHand.removeAllCards();
+                    System.out.println(playerHand);
+                }
+            System.out.println(playerHand);
                 // create hand for deal
                 //break down method so that we would have less parameters
 //            dealer.checkScore();
-            }
         }
     }
 
@@ -64,7 +66,7 @@ public class Table {
 //        System.out.println("21 congratulations, you won");
 //    } else {
 
-    public void checkScore(Hand currentHand, Deck currentDeck, Player myPlayer) {
+    public boolean checkScore(Hand currentHand, Deck currentDeck, Player myPlayer) {
         System.out.println("Enter (1) for Hit, (2) Stand or (3)Double");
         int choice = scan.nextInt();
         switch (choice) {
@@ -73,11 +75,22 @@ public class Table {
                 System.out.println(currentHand);
                 currentHand.calculateScore();
                 printScore(currentHand);
-                return;
+                if (currentHand.getScore() > 21) {
+                    System.out.println("Bust!!!");
+                   return true;
+                }
+                else if (currentHand.getScore() == 21) {
+                    System.out.println("21 congratulations, you won");
+                }
+                return choice == 2 ? true: false;
             case 2:
                 compareScoreToDealer(currentHand, dealerHand);
+                return true;
             case 3:
                 myPlayer.doubleBet();
+            default:
+                System.out.println("error!");
+                return true;
         }
     }
 
@@ -86,7 +99,7 @@ public class Table {
         String user = scan.nextLine();
         System.out.println("Please enter the total amount of money you would like to use ");
         int balance = scan.nextInt();
-        allPlayers.add(new Player(user, balance));
+        allPlayers.add(new  Player(user, balance));
     }
 
     public void printScore(Hand myHand) {
