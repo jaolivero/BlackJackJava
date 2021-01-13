@@ -32,17 +32,18 @@ public class Table {
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
             allHands.add(playerHand);
-                System.out.println("How much would you like to bet? ");
-                int betAmount = scan.nextInt();
-                playerOne.placeBet(betAmount);
-                deal(2,tableDeck, playerHand);
-                playerHand.calculateScore();
-                System.out.println(playerHand);
-                printScore(playerHand);
                 while(playerOne.getMoney() > 0) {
-                    checkScore(playerHand, tableDeck, playerOne);
-                    playerHand.removeAllCards();
+                    System.out.println("How much would you like to bet? ");
+                    int betAmount = scan.nextInt();
+                    playerOne.placeBet(betAmount);
+                    deal(2,tableDeck, playerHand);
+                    playerHand.calculateScore();
                     System.out.println(playerHand);
+                    printScore(playerHand);
+                    while(playerHand.getScore() <= 21) {
+                        System.out.println(playerHand);
+                        checkScore(playerHand, tableDeck, playerOne);
+                    }
                 }
             System.out.println(playerHand);
                 // create hand for deal
@@ -77,12 +78,15 @@ public class Table {
                 printScore(currentHand);
                 if (currentHand.getScore() > 21) {
                     System.out.println("Bust!!!");
+                    myPlayer.betResults('L');
+                    System.out.println("Available balance is now " + myPlayer.getMoney());
                    return true;
                 }
                 else if (currentHand.getScore() == 21) {
                     System.out.println("21 congratulations, you won");
+                    System.out.println("Available balance is now " + myPlayer.getMoney());
+                    myPlayer.betResults('W');
                 }
-                return choice == 2 ? true: false;
             case 2:
                 compareScoreToDealer(currentHand, dealerHand);
                 return true;

@@ -33,17 +33,21 @@ public class Hand {
         score = 0;
         hasAce = false;
         for(var card: myHand) {
-            score += card.getValue();
-        }
-        if (score > 21 && hasAce) {
-            score -= 10;
-            hasAce = false;
+            if(card.getValue() == 13 && score < 11) {
+                score =+ 11;
+            }
+            else if(card.getValue() == 13 && score > 11) {
+                score += 1;
+            }
+            else {
+                score += card.getValue();
+            }
         }
         return score;
     }
 
     public void removeAllCards() {
-        for(int i = 0; i < myHand.size() + 1; i++) {
+        for(int i = myHand.size() - 1; i >= 0; i--) {
             myHand.remove(i);
         }
     }
