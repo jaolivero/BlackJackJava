@@ -22,22 +22,24 @@ public class Player extends Moves {
         }
     }
 
-    public void placeBet(int amount) {
-        if (this.getMoney() < amount) {
+    public void placeBet() {
+        System.out.println("Enter bet amount ");
+        int betAmount = input.nextInt();
+        if (this.getMoney() < betAmount) {
             System.out.println("Please enter an valid amount.");
         }
         else {
-            currentBet =+ amount;
-            money -= amount;
+            currentBet =+ betAmount;
+            money -= betAmount;
         }
     }
 
-    public int betResults(char result) {
+    public void betResults(char result) {
         if(result == 'W') {
-            return money + currentBet;
+            money += + currentBet;
         }
         else {
-            return money - currentBet;
+            money -= currentBet;
         }
     }
 

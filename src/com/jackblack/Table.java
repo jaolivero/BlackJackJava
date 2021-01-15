@@ -26,22 +26,18 @@ public class Table {
         Hand dealersHand = new Hand(dealerOne);
         allHands.add(dealersHand);
         deal(2, tableDeck, dealersHand);
-        System.out.println(dealersHand);
         System.out.println("Dealer's hand");
         addPlayer();
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
             allHands.add(playerHand);
                 while(playerOne.getMoney() > 0) {
-                    System.out.println("How much would you like to bet? ");
-                    int betAmount = scan.nextInt();
-                    playerOne.placeBet(betAmount);
+                    playerOne.placeBet();
                     deal(2,tableDeck, playerHand);
                     playerHand.calculateScore();
-                    System.out.println(playerHand);
                     printScore(playerHand);
+                    //printScore(dealersHand);
                     while(playerHand.getScore() <= 21) {
-                        System.out.println(playerHand);
                         checkScore(playerHand, tableDeck, playerOne);
                     }
                 }
@@ -58,14 +54,8 @@ public class Table {
             currentDeck.removeCard(0);
             currentHand.addCard(gettingCard);
         }
+            System.out.println(currentHand);
     }
-
-//      if (currentHand.getScore() > 21) {
-//        System.out.println("Bust!!!");
-//        System.out.println(currentHand);
-//    } else if (currentHand.getScore() == 21) {
-//        System.out.println("21 congratulations, you won");
-//    } else {
 
     public boolean checkScore(Hand currentHand, Deck currentDeck, Player myPlayer) {
         System.out.println("Enter (1) for Hit, (2) Stand or (3)Double");
@@ -73,25 +63,26 @@ public class Table {
         switch (choice) {
             case 1:
                 deal(1, currentDeck, currentHand);
-                System.out.println(currentHand);
                 currentHand.calculateScore();
                 printScore(currentHand);
                 if (currentHand.getScore() > 21) {
                     System.out.println("Bust!!!");
                     myPlayer.betResults('L');
                     System.out.println("Available balance is now " + myPlayer.getMoney());
-                   return true;
                 }
                 else if (currentHand.getScore() == 21) {
                     System.out.println("21 congratulations, you won");
                     System.out.println("Available balance is now " + myPlayer.getMoney());
                     myPlayer.betResults('W');
                 }
+                currentHand.removeAllCards();
+                return true;
             case 2:
                 compareScoreToDealer(currentHand, dealerHand);
                 return true;
             case 3:
                 myPlayer.doubleBet();
+                return true;
             default:
                 System.out.println("error!");
                 return true;
@@ -103,11 +94,11 @@ public class Table {
         String user = scan.nextLine();
         System.out.println("Please enter the total amount of money you would like to use ");
         int balance = scan.nextInt();
-        allPlayers.add(new  Player(user, balance));
+        allPlayers.add(new Player(user, balance));
     }
 
     public void printScore(Hand myHand) {
-        System.out.println("SCORE");
+        System.out.println(myHand.getMyPlayer().getUsername().toUpperCase() + "'s"+ " SCORE");
         System.out.println("----");
         System.out.println(" " + myHand.getScore() + " ");
         System.out.println("----");
