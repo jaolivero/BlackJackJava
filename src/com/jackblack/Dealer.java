@@ -10,7 +10,7 @@ public class Dealer extends Moves {
         return name;
     }
 
-    public byte logic(byte score) {
-        return score < option ? hit : stand;
+    public boolean logic(byte score) {
+        return score < option ? true : false;
     }
 }

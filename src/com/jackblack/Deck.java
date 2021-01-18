@@ -7,7 +7,7 @@ public class Deck {
     private Card card;
     final static int cardAmount = 52;
     private final String[] suit = {"Hearts", "Club", "Diamond", "Spades"};
-    private final static byte[] cardValue = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13};
+    private final static byte[] cardValue = {2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13};
     private ArrayList<Card> cards;
 
     public Deck() {

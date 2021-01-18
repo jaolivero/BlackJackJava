@@ -6,6 +6,8 @@ public class Hand {
     private byte score;
     private ArrayList<Card> myHand;
     private Player myPlayer;
+
+
     private Dealer dealer;
 
     public Hand(Player myPlayer) {
@@ -60,6 +62,9 @@ public class Hand {
        score = reset;
     }
 
+    public Dealer getDealer() {
+        return dealer;
+    }
 
     @Override
     public String toString() {
