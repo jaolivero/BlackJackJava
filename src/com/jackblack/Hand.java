@@ -2,26 +2,19 @@ package com.jackblack;
 
 import java.util.ArrayList;
 
-public class Hand {
+public class Hand extends Moves {
     private byte score;
-    private ArrayList<Card> myHand;
     private Player myPlayer;
-
-
     private Dealer dealer;
 
     public Hand(Player myPlayer) {
         this.myPlayer = myPlayer;
-        this.myHand = new ArrayList<>();
+        this.cards = new ArrayList<>();
     }
 
     public Hand(Dealer tableDealer) {
         this.dealer = tableDealer;
-        this.myHand = new ArrayList<>();
-    }
-
-    public void addCard (Card dealt) {
-        myHand.add(dealt);
+        this.cards = new ArrayList<>();
     }
 
     public byte getScore() {
@@ -30,7 +23,7 @@ public class Hand {
 
     public byte calculateScore() {
         score = 0;
-        for(var card: myHand) {
+        for(var card: cards) {
             byte cardValue = card.getValue();
             if(cardValue == 13 && score < 11) {
                 score += 11;
@@ -48,18 +41,8 @@ public class Hand {
         return score;
     }
 
-    public void removeAllCards() {
-        for(int i = myHand.size() - 1; i >= 0; i--) {
-            myHand.remove(i);
-        }
-    }
-
     public Player getMyPlayer() {
         return myPlayer;
-    }
-
-    private void setScore(byte reset) {
-       score = reset;
     }
 
     public Dealer getDealer() {
@@ -69,10 +52,9 @@ public class Hand {
     @Override
     public String toString() {
         String output = "";
-        for (Card aCard : myHand) {
+        for (Card aCard : cards) {
             output += aCard + " ";
         }
-        System.out.println(getMyPlayer());
         return output;
     }
 }

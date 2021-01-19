@@ -3,7 +3,7 @@ package com.jackblack;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Deck {
+public class Deck extends Moves {
     private Card card;
     final static int cardAmount = 52;
     private final String[] suit = {"Hearts", "Club", "Diamond", "Spades"};
