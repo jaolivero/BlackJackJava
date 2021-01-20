@@ -3,7 +3,7 @@ package com.jackblack;
 import java.util.ArrayList;
 
 public class Moves {
-    private Card card;
+    Card card;
     ArrayList<Card> cards;
 
     public Card removeCard(int position) {
@@ -11,7 +11,7 @@ public class Moves {
     }
 
     public Card getCard(int i) {
-        return this.cards.get(i);
+        return cards.get(i);
     }
 
     public void addCard(Card addCard) {

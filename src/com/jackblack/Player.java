@@ -18,7 +18,6 @@ public class Player extends Moves {
     public void doubleBet () {
         if(doubleBet) {
             currentBet *= 2;
-            // deal card after
         }
     }
 
@@ -36,11 +35,12 @@ public class Player extends Moves {
 
     public void betResults(char result) {
         if(result == 'W') {
-            money += + currentBet;
+            money += currentBet;
         }
         else {
             money -= currentBet;
         }
+        currentBet = 0;
     }
 
     public int getMoney() {

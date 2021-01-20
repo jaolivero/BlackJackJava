@@ -1,6 +1,6 @@
 package com.jackblack;
 
-public class Dealer extends Moves {
+public class Dealer {
     static String name = "Dealer";
 
     public static String getName() {

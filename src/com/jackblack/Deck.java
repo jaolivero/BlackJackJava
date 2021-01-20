@@ -8,7 +8,6 @@ public class Deck extends Moves {
     final static int cardAmount = 52;
     private final String[] suit = {"Hearts", "Club", "Diamond", "Spades"};
     private final static byte[] cardValue = {2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13};
-    private ArrayList<Card> cards;
 
     public Deck() {
         this.cards = new ArrayList<Card>();
@@ -34,18 +33,6 @@ public class Deck extends Moves {
             cards.remove(randomIndex);
         }
         this.cards = shuffledDeck;
-    }
-
-    public Card removeCard(int position) {
-        return cards.remove(position);
-    }
-
-    public Card getCard(int i) {
-        return this.cards.get(i);
-    }
-
-    public void addCard(Card addCard) {
-        this.cards.add(addCard);
     }
 
     public Card draw() {

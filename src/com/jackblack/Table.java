@@ -12,6 +12,7 @@ public class Table {
     Hand dealersHand = new Hand(dealer);
     public List<Player> allPlayers = new ArrayList<>();
     public List<Hand> allHands = new ArrayList<>();
+    boolean endRound = false;
 
     public Table(byte seats) {
         this.seats = seats;
@@ -20,33 +21,35 @@ public class Table {
     public void game() {
         tableDeck.shuffle();
         allHands.add(dealersHand);
-        deal(2, tableDeck, dealersHand);
-        dealersHand.calculateScore();
-        printScore(dealersHand);
         addPlayer();
         for (Player playerOne : allPlayers) {
             Hand playerHand = new Hand(playerOne);
             allHands.add(playerHand);
                 while(playerOne.getMoney() > 0) {
                     playerOne.placeBet();
-                    deal(2,tableDeck, playerHand);
-                    playerHand.calculateScore();
+                    deal(2, playerHand);
                     printScore(playerHand);
+                    deal(2, dealersHand);
+                    printScore(dealersHand);
                     while(true) {
                         checkScore(playerHand, tableDeck, playerOne);
+                        if(endRound == false) {
+                            break;
+                        }
                     }
                 }
             System.out.println(playerHand);
         }
     }
 
-    public static void deal(int cardsDealt, Deck currentDeck, Hand currentHand) {
+    public void deal(int cardsDealt, Hand currentHand) {
         for(int i = 0; i < cardsDealt; i++) {
-            Card gettingCard = currentDeck.getCard(0);
-            currentDeck.removeCard(0);
+            Card gettingCard = tableDeck.getCard(0);
+            tableDeck.removeCard(0);
             currentHand.addCard(gettingCard);
         }
-            System.out.println(currentHand);
+        System.out.println(currentHand);;
+        currentHand.calculateScore();
     }
 
     public boolean checkScore(Hand currentHand, Deck currentDeck, Player myPlayer) {
@@ -54,8 +57,7 @@ public class Table {
         byte choice = scan.nextByte();
         switch (choice) {
             case 1:
-                deal(1, currentDeck, currentHand);
-                currentHand.calculateScore();
+                deal(1, currentHand);
                 printScore(currentHand);
                 if (currentHand.getScore() > 21) {
                     System.out.println("Bust!!!");
@@ -76,8 +78,8 @@ public class Table {
                 myPlayer.doubleBet();
             default:
                 System.out.println("error!");
+                break;
         }
-        currentHand.removeAllCards();
         return false;
     }
 
@@ -102,26 +104,29 @@ public class Table {
     }
 
     public void compareScoreToDealer(Hand myHand, Hand myDealer) {
-        byte playerScore = myHand.getScore();
-        byte dealerScore = myDealer.getScore();
         while(dealersHand.getScore() < 17) {
-            deal(1, tableDeck, dealersHand);
+            deal(1, dealersHand);
             dealersHand.calculateScore();
         }
+        byte playerScore = myHand.getScore();
+        byte dealerScore = myDealer.getScore();
         printScore(dealersHand);
         if (playerScore == dealerScore) {
             System.out.println("Push");
         } else if (dealerScore > 21) {
             myHand.getMyPlayer().betResults('W');
-            System.out.println("Dealer Busted " + dealerScore);
-        } else if (playerScore < dealerScore) {
+            System.out.println("Dealer Busted" );
+        } else if (dealerScore == 21) {
             myHand.getMyPlayer().betResults('L');
-            System.out.println("Dealer wins " + dealerScore);
+            System.out.println("Dealer wins");
         }
-        else {
-            System.out.println("You won !!");
+        else if(playerScore > dealerScore) {
             myHand.getMyPlayer().betResults('W');
+            System.out.println("You won !!!");
             System.out.println("Your Current Balance is " + myHand.getMyPlayer().getMoney());
         }
+        dealersHand.removeAllCards();
+        myHand.removeAllCards();
+        endRound = false;
     }
 }
